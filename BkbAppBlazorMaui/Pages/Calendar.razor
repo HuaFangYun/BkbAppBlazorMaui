@@ -1,0 +1,25 @@
+﻿@page "/calendar";
+
+<h3>Calendar</h3>
+
+<div class="calendar-header">
+    <button @onclick="PrevMonth">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <span>@Month</span>
+    <button @onclick="NextMonth">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</div>
+
+<div>
+    <span>@Year</span>
+</div>
+
+<div class="calendar">
+    @for (int i = 1; i <= Days; i++)
+    {
+        <div class="calenar-day-box">@i</div>
+    }
+</div>
+
