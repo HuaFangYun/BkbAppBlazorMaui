@@ -5,8 +5,12 @@
         Guid Id { get; set; }
 
         IUserViewModel User { get; set; }
+
+        Guid? UserId { get; set; }
         
         IGroupViewModel Group { get; set; }
+
+        Guid? GroupId { get; set; }
 
     }
 }

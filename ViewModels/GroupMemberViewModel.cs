@@ -6,8 +6,12 @@ namespace ViewModels
     {
         public Guid Id { get; set; }
 
-        public IUserViewModel User { get; set; }
+        public virtual IUserViewModel User { get; set; }
 
-        public IGroupViewModel Group { get; set; }
+        public Guid? UserId { get; set; }
+
+        public virtual IGroupViewModel Group { get; set; }
+
+        public Guid? GroupId { get; set; }
     }
 }

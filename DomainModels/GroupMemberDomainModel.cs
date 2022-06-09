@@ -6,8 +6,12 @@ namespace DomainModels
     {
         public Guid Id { get; set; }
 
-        public IUserDomainModel User { get; set; }
+        public virtual IUserDomainModel User { get; set; }
 
-        public IGroupDomainModel Group { get; set; }
+        public Guid? UserId { get; set; }
+
+        public virtual IGroupDomainModel Group { get; set; }
+
+        public Guid? GroupId { get; set; }
     }
 }

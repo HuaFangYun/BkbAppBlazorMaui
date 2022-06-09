@@ -12,6 +12,8 @@ namespace ViewModels
 
         public DateTime Date { get; set; }
 
-        public IGroupViewModel Group { get; set; }
+        public virtual IGroupViewModel Group { get; set; }
+
+        public Guid? GroupId { get; set; }
     }
 }

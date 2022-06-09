@@ -11,5 +11,7 @@
         DateTime Date { get; set; }
 
         IGroupDomainModel Group { get; set; }
+
+        Guid? GroupId { get; set; }
     }
 }

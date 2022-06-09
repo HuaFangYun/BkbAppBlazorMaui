@@ -12,6 +12,8 @@ namespace DomainModels
 
         public DateTime Date { get; set; }
 
-        public IGroupDomainModel Group { get; set; }
+        public virtual IGroupDomainModel Group { get; set; }
+
+        public Guid? GroupId { get; set; }
     }
 }

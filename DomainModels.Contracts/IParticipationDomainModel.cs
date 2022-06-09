@@ -10,6 +10,10 @@
 
         IUserDomainModel User { get; set; }
 
+        Guid? UserId { get; set; }
+
         IEventDomainModel Event { get; set; }
+
+        Guid? EventId { get; set; }
     }
 }

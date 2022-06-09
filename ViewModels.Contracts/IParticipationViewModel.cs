@@ -10,6 +10,10 @@
 
         IUserViewModel User { get; set; }
 
+        Guid? UserId { get; set; }
+
         IEventViewModel Event { get; set; }
+
+        Guid? EventId { get; set; }
     }
 }

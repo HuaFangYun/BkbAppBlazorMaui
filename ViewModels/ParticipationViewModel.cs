@@ -10,8 +10,12 @@ namespace ViewModels
 
         public string Reason { get; set; }
 
-        public IUserViewModel User { get; set; }
+        public virtual IUserViewModel User { get; set; }
 
-        public IEventViewModel Event { get; set; }
+        public Guid? UserId { get; set; }
+
+        public virtual IEventViewModel Event { get; set; }
+
+        public Guid? EventId { get; set; }
     }
 }

@@ -10,8 +10,12 @@ namespace DomainModels
 
         public string Reason { get; set; }
 
-        public IUserDomainModel User { get; set; }
+        public virtual IUserDomainModel User { get; set; }
 
-        public IEventDomainModel Event { get; set; }
+        public Guid? UserId { get; set; }
+
+        public virtual IEventDomainModel Event { get; set; }
+
+        public Guid? EventId { get; set; }
     }
 }
