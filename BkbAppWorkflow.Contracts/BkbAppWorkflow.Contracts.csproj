@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Mapper\" />
+    <ProjectReference Include="..\DomainModels.Contracts\DomainModels.Contracts.csproj" />
+    <ProjectReference Include="..\ViewModels.Contracts\ViewModels.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Mapper\" />
+    <ProjectReference Include="..\BkbAppWorkflow.Contracts\BkbAppWorkflow.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
