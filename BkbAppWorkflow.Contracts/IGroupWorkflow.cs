@@ -4,12 +4,12 @@ namespace BkbAppWorkflow.Contracts
 {
     public interface IGroupWorkflow
     {
-        IGroupViewModel CreateGroup(IGroupViewModel grpViewModel);
+        Task<IGroupViewModel> CreateGroupAsync(IGroupViewModel grpViewModel);
 
-        IGroupViewModel GetGroupById(Guid grpId);
+        Task<IGroupViewModel> GetGroupByIdAsync(Guid grpId);
 
-        void UpdateGroup(IGroupViewModel grpViewModel);
+        Task UpdateGroupAsync(IGroupViewModel grpViewModel);
 
-        void DeleteGroupById(Guid grpId);
+        Task DeleteGroupByIdAsync(Guid grpId);
     }
 }

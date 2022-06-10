@@ -4,12 +4,12 @@ namespace BkbAppWorkflow.Contracts
 {
     public interface IParticipationWorkflow
     {
-        IParticipationViewModel CreateParticipation(IParticipationViewModel ptpViewModel);
+        Task<IParticipationViewModel> CreateParticipationAsync(IParticipationViewModel ptpViewModel);
 
-        IParticipationViewModel GetParticipationById(Guid ptpId);
+        Task<IParticipationViewModel> GetParticipationByIdAsync(Guid ptpId);
 
-        void UpdateParticipation(IParticipationViewModel ptpViewModel);
+        Task UpdateParticipationAsync(IParticipationViewModel ptpViewModel);
 
-        void DeleteParticipationById(Guid ptpId);
+        Task DeleteParticipationByIdAsync(Guid ptpId);
     }
 }

@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Components.WebView.Maui;
 using BkbAppBlazorMaui.Data;
+using EntityFrameworkRepository;
+using Microsoft.EntityFrameworkCore;
+using BkbAppWorkflow;
 
 namespace BkbAppBlazorMaui;
 
@@ -20,8 +23,13 @@ public static class MauiProgram
 		builder.Services.AddBlazorWebViewDeveloperTools();
 #endif
 
-		builder.Services.AddSingleton<WeatherForecastService>();
+        builder.Services.AddDbContext<AppDbContext>(ob => ob.UseSqlServer("BkbApp"));
 
-		return builder.Build();
+		builder.Services.RegisterEntityFrameworkRepositoryServices();
+		builder.Services.RegisterDataMapperServices();
+		builder.Services.RegisterWorkflowServices();
+		builder.Services.RegisterLogicMapperServices();
+
+        return builder.Build();
 	}
 }

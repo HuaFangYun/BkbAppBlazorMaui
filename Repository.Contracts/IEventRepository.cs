@@ -4,12 +4,12 @@ namespace Repository.Contracts
 {
     public interface IEventRepository
     {
-        IEventDomainModel CreateEvent(IEventDomainModel evtDomainModel);
+        Task<IEventDomainModel> CreateEventAsync(IEventDomainModel evtDomainModel);
 
-        IEventDomainModel GetEventById(Guid evtId);
+        Task<IEventDomainModel> GetEventByIdAsync(Guid evtId);
 
-        void UpdateEvent(IEventDomainModel evtDomainModel);
+        Task UpdateEventAsync(IEventDomainModel evtDomainModel);
 
-        void DeleteEventById(Guid evtId);
+        Task DeleteEventByIdAsync(Guid evtId);
     }
 }

@@ -4,9 +4,9 @@ namespace Repository.Contracts
 {
     public interface IUserRepository
     {
-        IUserDomainModel CreateUserAsync(IUserDomainModel usrDomainModel);
+        Task<IUserDomainModel> CreateUserAsync(IUserDomainModel usrDomainModel);
 
-        IUserDomainModel GetUserByIdAsync(Guid usrId);
+        Task<IUserDomainModel> GetUserByIdAsync(Guid usrId);
 
         Task UpdateUserAsync(IUserDomainModel usrDomainModel);
 

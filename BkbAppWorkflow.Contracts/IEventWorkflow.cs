@@ -4,12 +4,12 @@ namespace BkbAppWorkflow.Contracts
 {
     public interface IEventWorkflow
     {
-        IEventViewModel CreateEvent(IEventViewModel evtViewModel);
+        Task<IEventViewModel> CreateEventAsync(IEventViewModel evtViewModel);
 
-        IEventViewModel GetEventById(Guid evtId);
+        Task<IEventViewModel> GetEventByIdAsync(Guid evtId);
 
-        void UpdateEvent(IEventViewModel evtViewModel);
+        Task UpdateEventAsync(IEventViewModel evtViewModel);
 
-        void DeleteEventById(Guid evtId);
+        Task DeleteEventByIdAsync(Guid evtId);
     }
 }

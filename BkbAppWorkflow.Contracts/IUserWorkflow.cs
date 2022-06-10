@@ -4,12 +4,12 @@ namespace BkbAppWorkflow.Contracts
 {
     public interface IUserWorkflow
     {
-        IUserViewModel CreateUser(IUserViewModel usrViewModel);
+        Task<IUserViewModel> CreateUserAsync(IUserViewModel usrViewModel);
 
-        IUserViewModel GetUserById(Guid usrId);
+        Task<IUserViewModel> GetUserByIdAsync(Guid usrId);
 
-        void UpdateUser(IUserViewModel usrViewModel);
+        Task UpdateUserAsync(IUserViewModel usrViewModel);
 
-        void DeleteUserById(Guid usrId);
+        Task DeleteUserByIdAsync(Guid usrId);
     }
 }

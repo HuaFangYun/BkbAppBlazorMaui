@@ -55,6 +55,8 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\BkbAppWorkflow.Contracts\BkbAppWorkflow.Contracts.csproj" />
+	  <ProjectReference Include="..\BkbAppWorkflow\BkbAppWorkflow.csproj" />
+	  <ProjectReference Include="..\EntityFrameworkRepository\EntityFrameworkRepository.csproj" />
 	  <ProjectReference Include="..\ViewModels.Contracts\ViewModels.Contracts.csproj" />
 	</ItemGroup>
 

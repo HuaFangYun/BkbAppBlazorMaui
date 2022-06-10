@@ -4,12 +4,12 @@ namespace Repository.Contracts
 {
     public interface IGroupMemberRepository
     {
-        IGroupMemberDomainModel CreateGroupMember(IGroupMemberDomainModel grpMmbDomainModel);
+        Task<IGroupMemberDomainModel> CreateGroupMemberAsync(IGroupMemberDomainModel grpMmbDomainModel);
 
-        IGroupMemberDomainModel GetGroupMemberById(Guid grpMmbId);
+        Task<IGroupMemberDomainModel> GetGroupMemberByIdAsync(Guid grpMmbId);
 
-        void UpdateGroupMember(IGroupMemberDomainModel grpMmbDomainModel);
+        Task UpdateGroupMemberAsync(IGroupMemberDomainModel grpMmbDomainModel);
 
-        void DeleteGroupMemberById(Guid grpMmbId);
+        Task DeleteGroupMemberByIdAsync(Guid grpMmbId);
     }
 }
